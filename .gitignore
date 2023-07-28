@@ -1,0 +1,11 @@
+.vscode/
+.DS_Store
+[Dd]ebug/
+[Rr]elease/
+x64/
+[Bb]in/
+[Oo]bj/
+build/
+*.nupkg
+**/packages/*
+!**/packages/build/
