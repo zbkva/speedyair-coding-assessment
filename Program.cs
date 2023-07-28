@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace speedyair_coding_assessment
 {
@@ -42,7 +42,8 @@ namespace speedyair_coding_assessment
         static Dictionary<string, Order> LoadOrdersFromJsonFile(string jsonFilePath)
         {
             string jsonString = File.ReadAllText(jsonFilePath);
-            return JsonConvert.DeserializeObject<Dictionary<string, Order>>(jsonString);
+
+            return JObject.Parse(jsonString).ToObject<Dictionary<string, Order>>();
         }
 
         static void DisplayFlightSchedule(Schedule schedule)

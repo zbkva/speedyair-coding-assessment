@@ -11,7 +11,8 @@ namespace speedyair_coding_assessment
             foreach (Flight flight in schedule.Flights)
             {
                 Console.WriteLine($"Flight: {flight.FlightNumber}, departure: {flight.DepartureAirport}, " +
-                                $"arrival: {flight.ArrivalAirport}, day: {flight.DayNumber}");
+                                $"arrival: {flight.ArrivalAirport}, day: {flight.DayNumber} orderCount: {flight.GetCurrentLoad()}");
+
             }
         }
     }
